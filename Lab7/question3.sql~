@@ -1,0 +1,9 @@
+CREATE OR REPLACE TRIGGER question3
+AFTER UPDATE OF salary ON e1
+FOR EACH ROW
+BEGIN
+        UPDATE d1
+        set tot_sal = tot_sal + :NEW.salary
+        WHERE dnumber = :NEW.dno;
+END;
+/

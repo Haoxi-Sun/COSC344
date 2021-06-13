@@ -1,0 +1,3 @@
+SELECT lname, salary*
+FROM employee
+WHERE 

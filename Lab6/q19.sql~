@@ -1,0 +1,8 @@
+SELECT snum, sname
+FROM salespeople
+WHERE snum IN (
+      SELECT snum
+      FROM customers
+      GROUP BY snum
+      HAVING count(snum) > 1
+           );
