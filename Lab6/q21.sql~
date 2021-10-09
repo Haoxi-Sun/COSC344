@@ -1,6 +1,0 @@
-SELECT fname, lname
-FROM employee
-WHERE NOT EXISTS(SELECT *
-                 FROM dependent
-                 WHERE ssn = essn)
-ORDER BY fname, lname;

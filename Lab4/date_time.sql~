@@ -1,6 +1,0 @@
-DROP TABLE date_time;
-
-CREATE TABLE date_time(a_day DATE, day_time DATE);
-
-INSERT INTO date_time VALUES(TO_DATE('31-01-2000','dd-mm-yyyy'),
-                             TO_DATE('31-01-2000 10:30:45','dd-mm-yyyy hh:mi:ss');

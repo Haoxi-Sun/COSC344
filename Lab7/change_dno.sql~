@@ -1,7 +1,0 @@
-CREATE OR REPLACE TRIGGER change_dno
-AFTER UPDATE OF dno ON e1
-FOR EACH ROW
-BEGIN
-        dno = :NEW.dno;
-END;
-/

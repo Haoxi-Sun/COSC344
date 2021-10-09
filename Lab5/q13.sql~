@@ -1,7 +1,0 @@
-SELECT salespeople.snum, orders.amt
-FROM salespeople, orders
-WHERE orders.amt = (
-SELECT MAX(amt)
-FROM orders
-WHERE orders.snum = salespeople.snum AND amt > 3000) 
-ORDER BY salespeople.snum;

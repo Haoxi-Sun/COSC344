@@ -4,7 +4,8 @@ YOUR FRIEND: SELECT * FROM hsun.emp;
 
 PART 2:
 YOU: GRANT UPDATE(dname), SELECT ON dept TO hsun1;
-YOUR FRIEND: UPDATE hsun.dept SET dname = 'NewName' WHERE dnumber = 1;
+YOUR FRIEND: UPDATE hsun.dept SET dname = 'NewName' WHERE dnumber = 1; COMMIT;
+YOU: SELECT * FROM dept;
 
 PART 3:
 YOU: REVOKE UPDATE ON dept FROM hsun1;
@@ -40,7 +41,7 @@ PART 6:
 YOU: CREATE VIEW emp_salary AS
 	 SELECT fname, lname, salary
 	 FROM emp
-	 WHERE salary < 50000;
+	 WHERE salary <= 50000;
 	
 	 GRANT SELECT ON emp_salary TO hsun1;
 

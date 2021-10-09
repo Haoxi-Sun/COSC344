@@ -1,8 +1,0 @@
-SELECT *
-FROM orders
-WHERE cnum IN (
-            SELECT cnum
-            FROM orders
-            GROUP BY cnum
-            HAVING count(cnum)>1
-            );
